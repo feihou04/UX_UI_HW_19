@@ -56,15 +56,44 @@ $(document).ready(function() {
 
 // button mouseenter and mouseout function
 
-$(document).ready(function(e){
+
   $(".btn").on("mouseenter", function(e){
       x = e.pageX - $(this).offset().left;
       y = e.pageY - $(this).offset().top;
       $(this).find("#effect").css({top:y, left:x});
+     // $("#etp").attr('src','images/flash2.gif');
+
+
   });
   $(".btn").on("mouseout", function(e){
       x = e.pageX - $(this).offset().left;
       y = e.pageY - $(this).offset().top;
       $(this).find("#effect").css({top:y, left:x});
+      //$("#etp").attr('src','images/Frame 41.png');
   });
+
+// mouseenter and mouseout function for portfolio pictures switching to gif files    
+$(".etp").on("mouseenter", function(){
+  $("#etp").attr('src','images/flashresize2.gif');
+});
+
+$(".etp").on("mouseout", function(){
+ $("#etp").attr('src','images/Frame 41.png');
+});
+
+
+$(".park").on("mouseenter", function(){
+  $("#park").attr('src','images/Presentation2.gif');
+});
+
+$(".park").on("mouseout", function(){
+ $("#park").attr('src','images/Frame 40a.png');
+});
+
+$(".peel").on("mouseenter", function(){
+  $("#peel").attr('src','images/peel.gif');
+});
+
+$(".peel").on("mouseout", function(){
+ $("#peel").attr('src','images/Frame 43.png');
 });

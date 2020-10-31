@@ -1,0 +1,419 @@
+body {
+
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.15em;
+}
+/*hamburger menu with side menu css below*/
+
+.visible {
+  display: block !important;
+}
+
+nav.flexheader {
+  position: relative;
+  /*position: fixed;*/
+
+  background-color: #19292d;
+  box-sizing: border-box;
+     width: 100vw;
+     /* height: 70px;
+     width: 100%; */
+     height: 100px;
+   
+     display: flex; 
+     justify-content: space-between;align-items: center;
+     
+     padding: 60px;
+ 
+}
+
+ 
+#logo {
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.logo img:hover {
+    transform: rotateY(360deg);
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+.logo p {
+  float: right;
+  color:#dfebed;
+}
+
+
+.menuoverlay {
+  z-index: 1337;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+ 
+  background: #dfebed;
+  top: 0;
+  left: 0;
+
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.position {  
+ margin-left: 40%;
+
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+
+ /* font-size: 24px;
+  font-weight: bold;
+  line-height: 36px;*/
+  /*padding: 50px 50px 50px 250px ;*/
+}
+
+
+
+.hamburger-menu, .hamburger-menu:after, .hamburger-menu:before {
+  width: 33px;
+  height: 4px;
+  border-radius: 2px;
+
+}
+.hamburger-wrapper {
+  display: block;
+  padding: 12px 35px;
+  z-index: 1338;
+
+}
+.hamburger-menu {
+  position: relative;
+  background: #dfebed;
+  transition: all 0ms 200ms;
+  display: block;
+}
+.hamburger-menu.animate {
+  background: #dfebed;
+  position: relative;
+}
+.hamburger-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  background: #dfebed;
+  transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger-menu:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  background:#dfebed;
+  transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger-menu.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  background: #19292d;
+}
+.hamburger-menu.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  background: #19292d;
+}
+
+
+.portfoliolist {
+
+  list-style: none;
+  font-weight: 500;
+  font-size: 24px;
+  padding: 10px 15px 10px 125px;
+  display: none;
+  background: #dfebed;
+  color: #000;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.title {
+height: 100px;
+cursor: pointer;
+
+}
+
+.title :hover {
+  text-decoration: underline;
+  text-decoration-color: #ffad6f;
+  transform: translateX(25px);
+  translate: all 0.25s;
+}
+.second i {
+
+
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+   padding-left: 70px;
+   font-size: 24px;
+  
+}
+.title h2 { 
+
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+padding-left: 25px;
+
+font-size: 38px;
+font-weight: 600;
+letter-spacing: 5px;
+
+}
+.first, .second, .third, .fourth {
+  font-size: 20px;
+  font-weight: 500;
+  vertical-align: middle;
+  padding-left: 15px;
+
+ 
+}
+.title h2:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+
+}
+.portfoliolist1, .portfoliolist2, .portfoliolist3 {
+  padding-bottom: 12px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #19292d;
+}
+.portfoliolist4 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #19292d;
+}
+.portfoliolist li a {
+  text-decoration: none;
+  color: #19292d;
+}
+
+.flextitle {
+
+  background-image: url(../images/headingbackground.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.contacttitle h2,
+.contacttitle h3 {
+
+  text-align: center;
+  margin: 0px;
+
+}
+
+
+.flexmain h3,
+.flexmain p {
+  margin-left: 50px;
+}
+
+.contactmethod {
+  margin: 0 25px ;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.email1 {
+  padding-bottom: 25px;
+  display: grid;
+
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 60px 60px;
+  grid-template-areas:
+    "icon email"
+    "emailaddress emailaddress";
+
+  text-align: left;
+  /*align-content: center;*/
+  justify-content: center;
+}
+#icon1 {
+  grid-area: icon;
+  padding-right: 25px;
+}
+.email {
+  grid-area: email;
+  line-height: 60px;
+}
+.emailaddress {
+  grid-area: emailaddress;
+}
+.linkedin {
+  padding-bottom: 25PX;
+  display: grid;
+
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 60px 60px;
+  grid-template-areas:
+    "linicon linkedin"
+    "linaddress linaddress";
+
+  text-align: left;
+  /*align-content: center;*/
+  justify-content: center;
+}
+
+#linicon {
+  grid-area: linicon;
+  padding-right: 25px;
+}
+.linkedin1 {
+  grid-area: linkedin;
+  line-height: 60px;
+}
+.address {
+  grid-area: linaddress;
+  }
+
+.address :hover, .emailaddress :hover {
+  color: dodgerblue;
+  text-decoration-color: dodgerblue;
+  
+}
+
+.flexfooter {
+
+  background: #19292d;
+
+   padding: 20px 50px;
+  color: #dfebed;
+  display: flex;
+ 
+ 
+  justify-content: space-between;
+}
+.socialmedia {
+  width: 100px;
+  position: relative;
+  display: flex;
+ 
+  align-items: center;
+  
+}
+.socialmedia1, .socialmedia2 {
+    cursor: pointer;
+
+    padding-right: 25px;
+    transition: color 1s ease;
+}
+
+.socialmedia1 :hover, .socialmedia2 :hover {
+    color: dodgerblue
+}
+
+
+
+
+
+@media all and (max-width: 600px) {
+   
+  .flexheader {
+     
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    
+}
+#logo {
+    margin-bottom: 10px;
+}
+
+ .logo p {
+     display: none;
+ }
+ .hamburger-menu, .hamburger-menu:after, .hamburger-menu:before {
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+ 
+}
+.hamburger-wrapper {
+
+    padding: 0px;
+    
+   
+}
+ .position {
+ 
+     margin-left: 15%;
+     margin-top: 10%;
+     
+ }
+ .position .span, .position h2, .position i {
+     font-size: 26px;
+ }
+ .position i {
+    font-size: 14px;
+    padding-left: 30px;
+}
+
+ .portfoliolist li {
+    font-size: 18px;
+    
+}
+.position ul {
+    padding-left: 100px;
+    padding-top: 0px;
+}   
+.contacttitle h2 {
+  font-size: 30px;
+}
+.contacttitle h3 {
+  font-size: 24px;
+}
+
+  .flexmain h3,
+  .flexmain p {
+  margin-left: 40px;
+  font-size: 26px;
+}
+
+    .contactmethod {
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+     
+      
+    }
+
+    .flexfooter {
+      display: flex;
+      flex-direction: column;
+    }
+    .socialmedia {
+      flex-direction: column;
+    
+      padding-left: -20px;
+      align-items: start;
+          
+    }
+    .socialmedia1, .socialmedia2 {
+      padding-bottom: 20px;
+   
+    }
+

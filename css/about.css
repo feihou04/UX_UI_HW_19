@@ -1,0 +1,334 @@
+body {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1.15em;
+    
+}
+.flexheader {
+    display: flex;
+    background-color: #19292d;
+    color: #dfebed;
+    padding: 25px 25px 25px 50px;
+    
+    justify-content: space-between;
+  }
+  
+   
+  #logo {
+    padding-right: 20px;
+    padding-top: 10px;
+  }
+  .logo p {
+    float: right;
+  }
+  
+  .item ul {
+    list-style: none;
+    display: flex;
+  }
+  .listitem, .listitemabout, .listitemcontact {
+    padding-right: 80px;
+    
+    flex: auto;
+    cursor: pointer;
+    transition: text-decoration 1s ease;
+  }
+  .listitemcontact  span, .listitem span {
+    text-decoration: none;
+    color: #dfebed;
+    
+
+}
+.listitemcontact a, .listitem a {
+    text-decoration: none;
+}
+
+
+.listitemcontact :hover, .listitem :hover, .listitemabout :hover{
+  text-decoration: underline;
+  text-decoration-color: #ffad6f;
+  color: #dfebed;
+}
+
+
+.listitemcontact span  :active :after, .listitem span :active :after {
+  text-decoration: none;
+  text-decoration: underline;
+  color: #dfebed;
+}
+.gridcontainer1 {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    grid-template-areas:
+   "heroimg herowordbackground";
+    background-color: #19292d;
+    padding-right: 12%;
+    padding-left: 12%;
+    padding-bottom: 2%;
+
+}
+.heroimg {
+    grid-area: heroimg;
+    justify-self: end;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+
+}
+.heroimg img {
+        border: 1px solid #dfebed;
+}
+
+.herowordbackground {
+    grid-area: herowordbackground;
+    color: #dfebed;
+    height: 239px;
+    line-height: 239px;
+    background-color:#dfebed;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+ 
+}
+.mystorytitle, .mystorytitle1 {
+    color: #ffad6f;
+    font-weight: 800;
+}
+
+.heroword {
+    display: inline-block;
+    font-size: 30px;
+    vertical-align: middle;
+    text-align: center;
+    color: #19292d;
+    line-height: normal;
+    padding-right: 15px;
+    padding-left: 15px;
+      
+}
+.mystory {
+ margin-right: 8%;
+ margin-left: 8%;
+}
+.mystory p {
+    text-align: justify;
+}
+
+.mystory h2 {
+    display: inline-block;
+    padding-right: 15px;
+}
+.imgbox {
+  
+      display: inline-block;
+       border: 1px solid white;
+      vertical-align: top;
+  
+}
+.imgbox a :hover {
+    display: inline-block;
+    border: 2px solid #ffad6f;
+    border-radius: 50%;
+}
+.gridcontainer2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title title title"
+    "tool design other";
+    background-image: url(../images/skillimg41.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-color: #dfebed;
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    grid-column-gap: 10%;
+    margin-bottom: 2%;
+
+}
+.skill ul {
+    list-style: none;
+}
+.center {
+    grid-area: title;
+    text-align: center;
+}
+.tool {
+    grid-area: tool;
+}
+.design {
+    grid-area: design;
+}
+
+.other {
+    grid-area: other;
+}
+.toolitem, .designitem, .otheritem {
+    padding: 0px;
+}
+
+.gridcontainer3 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: " title1 title2"
+    "education designation";
+    background-color: #dfebed;
+    background-image: url(../images/educationimage\ 42.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 2%;
+    grid-column-gap: 15%;
+
+}
+.education1 {
+    grid-area: education;
+}
+
+.designation {
+    grid-area: designation;
+}
+
+
+ .flexfooter {
+    background-color: #19292d;
+    padding: 20px 50px;
+    color: #dfebed;
+    display: flex;
+  
+    justify-content: space-between;
+  }
+  .socialmedia {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .socialmedia1, .socialmedia2 {
+      cursor: pointer;
+      flex: auto;
+      padding-right: 1em;
+      transition: color 1s ease;
+  }
+
+  
+  .socialmedia1 :hover, .socialmedia2 :hover {
+      color: dodgerblue
+  }
+  
+
+  @media all and (max-width: 600px) {
+    .flexheader {
+        flex-direction: column;
+        
+    }
+    #logo {
+        margin-bottom: 10px;
+    }
+     .item ul {
+        
+         flex-direction: column;
+           padding-left: 0px;
+     }
+     .listitem, .listitemabout, .listitemcontact {
+       padding-bottom: 25px;
+      
+    
+     }
+     .logo p {
+         display: none;
+     }
+
+     .gridcontainer1 {
+         display: grid;
+         grid-template-column: auto;
+         grid-template-rows: auto auto;
+         grid-template-areas: "heroimg"
+         "herowordbackground";
+         align-content: center;
+         justify-content: center;
+         
+
+     }
+     .heroimg {
+         grid-area: heroimg;
+        /* width: 353.5px;*/
+        justify-self: center;
+   
+       width: auto;
+     }
+     .herowordbackground {
+         grid-area: herowordbackground;
+         height: auto;
+       
+     }
+     .heroword {
+           font-size: 26px;
+           padding-right: 15px;
+           padding-left: 15px;
+     }
+     .gridcontainer2 {
+         display: grid;
+         grid-template-columns: auto auto;
+         grid-template-rows: auto auto auto;
+         grid-template-areas: "title title"
+         "tool design"
+   
+         "other other";
+         justify-content: center;
+         padding-right: 8%;
+         padding-left: 8%;
+         grid-column-gap: 15%;
+         font-size: 0.9em;
+     }
+     .mystorytitle {
+         font-size: 1.5em;
+     }
+     .mystorytitle1 {
+         font-size: 1.25em;
+     }
+     .center {
+         justify-self: center;
+         width: auto;
+       
+     }
+     .gridcontainer3 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "education"
+        "designation";
+        justify-content: center;
+        padding-right: 8%;
+        padding-left: 8%;
+        font-size: 0.9em;
+      
+    }
+
+     .flexfooter {
+       flex-direction: column;
+     }
+     .socialmedia {
+       flex-direction: column;
+     
+       padding-left: -20px;
+       align-items: start;
+           
+     }
+     .socialmedia1, .socialmedia2 span {
+       padding-bottom: 20px;
+       font-size: 0.8em;
+    
+     }
+     .flexfooter p {
+         font-size: 1em;
+     }
+
+
