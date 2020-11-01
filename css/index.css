@@ -102,7 +102,7 @@ nav.flexheader {
  
     background-color: #19292d;
     box-sizing: border-box;
-       width: 100vw;
+       width: 100%;
        /* height: 70px;
        width: 100%; */
        height: 100px;
@@ -310,18 +310,18 @@ nav.flexheader {
     grid-template-areas:
     "main feipic"
     "movingarrow movingarrow"
-    "portfolioheading portfolioheading"
+    /*"portfolioheading portfolioheading"*/
     "porfolio1  portfolio1"
     "porfolio2  portfolio2"
     "porfolio3  portfolio3"
     "porfolio4  portfolio4";
-    grid-template-columns: 58% 42%;
+    grid-template-columns: 56% 44%;
      grid-template-rows:  auto auto auto auto auto auto;
    
      grid-row-gap: 20px;
      justify-content: center;
-     width: 100vw;
-     background-color: #ebf7fc ;
+  
+  background-color: #ebf7fc ;
    
    
 }
@@ -336,8 +336,8 @@ nav.flexheader {
     color: #dfebed;
     justify-items: center;
 
-    padding: 0px 40px 90px 110px;
-
+ padding: 0px 40px 90px 110px;
+      /* padding: 40px 40px 90px 130px;*/
         
 }
 .name {
@@ -364,7 +364,7 @@ nav.flexheader {
 .btn {
     position: relative;
     padding: 10px 30px;
-    border: 2px solid #dfebed;
+    border: 1px solid #dfebed;
     margin: 50px 50px 0 0;
     display: inline-block;
     text-decoration: none;
@@ -419,8 +419,8 @@ nav.flexheader {
 
 }
 .btn:hover #effect {
-    width: 400px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
 
   
 }
@@ -434,6 +434,7 @@ nav.flexheader {
     padding-left: 60px;
     padding-right: 100px;
     align-items: center;
+    justify-items: end;
   
 
 }
@@ -446,26 +447,23 @@ nav.flexheader {
    grid-area: movingarrow;
    justify-self: center;
    align-self: center;
-  /* background-color:#19292d;*/
-   margin-top: -120px;
+   margin-top: -200px;
+
     
 }
-.portfolioheading {
+/*.portfolioheading {
     grid-area: portfolioheading;
-    justify-self: center;
-    align-self: center;
-    color: #19292d;
+     color: #19292d;
     font-family: 'Lobster', cursive;
-    font-size: 28px;
-
+    display: grid;
+ 
 }
 .portfolioheading h2 {
+     color: #ffad6f;
     text-align: center;
-    color: #ffad6f;
-    font-weight: 600;
-    margin-bottom:-40px;
-   
-}
+ 
+}*/
+
 .portfolio1 {
     grid-area: portfolio1;
     justify-self: center;
@@ -473,6 +471,8 @@ nav.flexheader {
    
     background-color:#f4e7d3 ;
     grid-column-start: 1;
+
+  
     margin-right: 120px;
     margin-left: 120px;
     padding: 40px 80px 30px 60px;
@@ -703,13 +703,13 @@ nav.flexheader {
         "feipic"
         "main"
         "movingarrow"
-        "portfolioheading"
+        /*"portfolioheading"*/
         "porfolio1"
         "porfolio2"
         "porfolio3"
         "porfolio4";
         grid-template-columns: 100%;
-         grid-template-rows: auto auto auto auto auto auto auto auto;
+         grid-template-rows: auto auto auto auto auto auto auto;
          grid-row-gap: 5px;
  
    
@@ -759,8 +759,8 @@ nav.flexheader {
 #button2 {
     display: inline-block;
 }
-}
-.portfolioheading {
+
+/*.portfolioheading {
     grid-area: portfolioheading;
     justify-self: center;
     align-self: center;
@@ -774,15 +774,15 @@ nav.flexheader {
 
 
 }
-#portfoliosection h1{
+.portfolioheading h1{
     font-size: 32px;
     text-align: center;
 }
-#portfoliosection h2{
+.portfolioheading h2{
     font-size: 28px;
     text-align: center;
     margin-bottom: 15px;
-}
+}*/
 
 .portfolio1 {
     grid-area: portfolio1;
