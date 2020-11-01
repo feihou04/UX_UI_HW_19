@@ -3,58 +3,213 @@ body {
     font-size: 1.15em;
     
 }
-.flexheader {
-    display: flex;
+/*hamburger menu with side menu css below*/
+
+.visible {
+    display: block !important;
+}
+
+nav.flexheader {
+    position: relative;
+    /*position: fixed;*/
+ 
     background-color: #19292d;
-    color: #dfebed;
-    padding: 25px 25px 25px 50px;
-    
-    justify-content: space-between;
+    box-sizing: border-box;
+       width: 100vw;
+       /* height: 70px;
+       width: 100%; */
+       height: 100px;
+     
+       display: flex; 
+       justify-content: space-between;align-items: center;
+       
+       padding: 60px;
+   
   }
   
    
-  #logo {
+ #logo {
     padding-right: 20px;
     padding-top: 10px;
   }
+
+  .logo img:hover {
+      transform: rotateY(360deg);
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
+      cursor: pointer;
+  }
+
   .logo p {
     float: right;
+    color:#dfebed;
   }
-  
-  .item ul {
+
+
+.menuoverlay {
+    z-index: 1337;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+   
+    background: #dfebed;
+    background-image: url(../images/star.gif);
+    top: 0;
+    left: 0;
+ 
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.position {  
+   margin-left: 40%;
+
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+ 
+   /* font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;*/
+    /*padding: 50px 50px 50px 250px ;*/
+}
+ 
+
+
+.hamburger-menu, .hamburger-menu:after, .hamburger-menu:before {
+    width: 33px;
+    height: 4px;
+    border-radius: 2px;
+
+}
+.hamburger-wrapper {
+    display: block;
+    padding: 12px 35px;
+    z-index: 1338;
+
+}
+.hamburger-menu {
+    position: relative;
+    background: #dfebed;
+    transition: all 0ms 200ms;
+    display: block;
+}
+.hamburger-menu.animate {
+    background: #dfebed;
+    position: relative;
+}
+.hamburger-menu:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    background: #dfebed;
+    transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger-menu:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background:#dfebed;
+    transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger-menu.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+    background: #19292d;
+}
+.hamburger-menu.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+    background: #19292d;
+}
+
+
+.portfoliolist {
+ 
     list-style: none;
-    display: flex;
-  }
-  .listitem, .listitemabout, .listitemcontact {
-    padding-right: 80px;
-    
-    flex: auto;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 15px 10px 125px;
+    display: none;
+    /*background: #dfebed;*/
+    color: #000;
+    margin-bottom: 0px;
     cursor: pointer;
-    transition: text-decoration 1s ease;
-  }
-  .listitemcontact  span, .listitem span {
-    text-decoration: none;
-    color: #dfebed;
+}
+
+.title {
+ height: 100px;
+ cursor: pointer;
+ 
+
+}
+.title a h2 {
+    color: #19292d;
+}
+.title :hover {
+    text-decoration: underline;
+    text-decoration-color: #ffad6f;
+    transform: translateX(25px);
+    translate: all 0.25s;
+}
+.second i {
+  
+
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+     padding-left: 70px;
+     font-size: 24px;
     
+}
+.title h2 { 
+
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  padding-left: 25px;
+
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 5px;
 
 }
-.listitemcontact a, .listitem a {
+.first, .second, .third, .fourth {
+    font-size: 20px;
+    font-weight: 500;
+    vertical-align: middle;
+    padding-left: 15px;
+ 
+   
+}
+.title h2:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+
+}
+ .portfoliolist1, .portfoliolist2, .portfoliolist3 {
+    padding-bottom: 12px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #19292d;
+}
+.portfoliolist4 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #19292d;
+}
+.portfoliolist li a {
     text-decoration: none;
+    color: #19292d;
 }
 
-
-.listitemcontact :hover, .listitem :hover, .listitemabout :hover{
-  text-decoration: underline;
-  text-decoration-color: #ffad6f;
-  color: #dfebed;
-}
-
-
-.listitemcontact span  :active :after, .listitem span :active :after {
-  text-decoration: none;
-  text-decoration: underline;
-  color: #dfebed;
-}
 .gridcontainer1 {
     display: grid;
     grid-template-columns: auto auto;
@@ -62,6 +217,7 @@ body {
     grid-template-areas:
    "heroimg herowordbackground";
     background-color: #19292d;
+    width: 100vw;
     padding-right: 12%;
     padding-left: 12%;
     padding-bottom: 2%;
@@ -82,6 +238,7 @@ body {
 .herowordbackground {
     grid-area: herowordbackground;
     color: #dfebed;
+    width: 70%;
     height: 239px;
     line-height: 239px;
     background-color:#dfebed;
@@ -226,47 +383,78 @@ body {
 
   @media all and (max-width: 600px) {
     .flexheader {
-        flex-direction: column;
+     
+        margin-bottom: 0px;
+        padding-bottom: 0px;
         
     }
     #logo {
         margin-bottom: 10px;
     }
-     .item ul {
-        
-         flex-direction: column;
-           padding-left: 0px;
-     }
-     .listitem, .listitemabout, .listitemcontact {
-       padding-bottom: 25px;
-      
-    
-     }
+
      .logo p {
          display: none;
      }
+     .hamburger-menu, .hamburger-menu:after, .hamburger-menu:before {
+        width: 28px;
+        height: 3px;
+        border-radius: 2px;
+     
+    }
+    .hamburger-wrapper {
+    
+        padding: 0px;
+        
+       
+    }
+     .position {
+        margin-left: 15%;
+        margin-top: 10%;
+         
+     }
+     .position .span, .position h2, .position i {
+         font-size: 26px;
+     }
+     .position i {
+        font-size: 14px;
+        padding-left: 30px;
+    }
+
+     .portfoliolist li {
+        font-size: 18px;
+        
+    }
+    .position ul {
+        padding-left: 100px;
+        padding-top: 0px;
+    }   
 
      .gridcontainer1 {
          display: grid;
-         grid-template-column: auto;
+         grid-template-columns: auto;
          grid-template-rows: auto auto;
          grid-template-areas: "heroimg"
          "herowordbackground";
-         align-content: center;
+         align-self: center;
          justify-content: center;
+          width: 353.5px;
+          padding-bottom: 10px;
+          
          
 
      }
      .heroimg {
          grid-area: heroimg;
-        /* width: 353.5px;*/
-        justify-self: center;
-   
-       width: auto;
+         justify-self: center;
+        align-self: center;
+          width: auto;
+          padding-bottom: 0px;
+        
      }
      .herowordbackground {
          grid-area: herowordbackground;
          height: auto;
+         width: auto;
        
      }
      .heroword {

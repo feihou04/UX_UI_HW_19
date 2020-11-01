@@ -54,11 +54,12 @@ nav.flexheader {
   position: fixed;
  
   background: #dfebed;
+  background-image: url(../images/star.gif);
   top: 0;
   left: 0;
 
   font-weight: 400;
-  font-size: 40px;
+  font-size: 28px;
 }
 
 .position {  
@@ -135,7 +136,7 @@ nav.flexheader {
   font-size: 24px;
   padding: 10px 15px 10px 125px;
   display: none;
-  background: #dfebed;
+ /* background: #dfebed;*/
   color: #000;
   margin-bottom: 0px;
   cursor: pointer;
@@ -145,8 +146,11 @@ nav.flexheader {
 height: 100px;
 cursor: pointer;
 
-}
 
+}
+.title a h2 {
+  color: #19292d;
+}
 .title :hover {
   text-decoration: underline;
   text-decoration-color: #ffad6f;
@@ -206,24 +210,41 @@ letter-spacing: 5px;
   color: #19292d;
 }
 
-.flextitle {
+.contacttitle {
+  position: relative;
 
-  background-image: url(../images/headingbackground.png);
+  background-image: url(../images/page-heading-background-contact-us\ 1.png);
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 400px;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-}
-.contacttitle h2,
-.contacttitle h3 {
 
-  text-align: center;
+}
+div.contacttitle::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(255,255,255,0.25);;
+
+  
+}
+div.contacttitle h2, div.contacttitle h3 {
+ position: relative;
   margin: 0px;
+  color: black;
+  font-weight: bold;
+
+
 
 }
 

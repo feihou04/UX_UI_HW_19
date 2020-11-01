@@ -51,7 +51,7 @@ $(document).ready(function() {
 //});
 
   $('.second').click(function() {
-    $('i').toggleClass('fas fa-plus fas fa-minus');
+    $('#plusicon').toggleClass('fas fa-plus fas fa-minus');
   });
 
 // button mouseenter and mouseout function

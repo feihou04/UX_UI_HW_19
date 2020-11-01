@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 
 </head>
@@ -47,31 +48,31 @@
    <div class="position">
        <div class="title first">
           <span class="first">01.</span>
-           <h2>Home</h2>
+           <a href="#homepage"><h2>Home</h2></a>
         </div>
    
          <div class="title second">
           <span class="second">02.</span>
            <h2 id="portfolioitems">Portfolio</h2>
            <!--<span class="plus">+</span>-->
-           <i class="fas fa-plus"></i>
+           <i id="plusicon" class="fas fa-plus"></i>
            
         </div>
         
           <ul class="portfoliolist">
-            <li class="portfoliolist1"><a href="#">eTripplanner</a></li>
-            <li class="portfoliolist2"><a href="#">Ontario Parks</a></li>
-            <li class="portfoliolist3"><a href="#">Peel Animal Rescue Society</a></li>
-            <li class="portfoliolist4"><a href="#">Risk Control Self Assessment Solution</a></li>
+            <li class="portfoliolist1"><a href="#portfolioetp">eTripplanner</a></li>
+            <li class="portfoliolist2"><a href="#portfoliopark">Ontario Parks</a></li>
+            <li class="portfoliolist3"><a href="#portfoliopeel">Peel Animal Rescue Society</a></li>
+            <li class="portfoliolist4"><a href="#portfoliorisk">Risk Control Self Assessment Solution</a></li>
           </ul>
      
           <div class="title third">
          <span class="third">03.</span>
-           <h2>About Me</h2>
+           <a href="about.html"><h2>About Me</h2></a>
         </div>
        <div class="title fourth">
          <span class="fourth">04.</span>
-           <h2>Contact</h2>
+           <a href="contact.html"><h2>Contact</h2></a>
         </div>
     </div>
    </div>
@@ -79,13 +80,16 @@
  </nav>
 
  
-    <div class="gridcontainer">
+    <div class="gridcontainer" id="homepage">
       <div class="description">
         <h2 class="name">Fei Hou</h2>
-        <p class="word">A New Product Designer and UX/UI Enthusiast with extensive knowledge in Corporate governance, risk management and controls.  I have diverse range of work experience in the Financial services industry, holding positions including a Senior risk management director at CIBC, an AVP of internal audit at manulife and a senior audit manager at KPMG. </p>   
+        <p class="word">A New <span>Product Designer</span> and <span>UX/UI Enthusiast</span> with extensive knowledge in Corporate governance, risk management and controls.  I have<span> diverse range of work experiences</span> in the Financial services industry, holding positions including a Senior risk management director at CIBC, an AVP of internal audit at manulife and a senior audit manager at KPMG. </p>   <br><br>
      
        <!--<button class="button"><a href="about.html" >Know More About Fei</a></button> -->
-       <a href="#" class="btn"><span id="effect"></span>Know More About Fei</a>
+       <div>
+       <a href="about.html" id="button1" class="btn"><span id="effect"></span>Know More About Fei</a>
+       <a href="#portfoliosection" class="btn" id="button2"><span id="effect"></span>View Fei's Portfolio</a>
+      </div>
  </div>
  
      <div class="feipic">
@@ -94,8 +98,11 @@
   
       <div class="movingarrow"><img src="images/resize moving arrow.gif" alt="arrow" width="70px" height="120px";></div>
   
-  
-       <div class="portfolio1">
+  <div class="portfolioheading" id="portfoliosection">
+    <h2>My Portfolio</h2>
+    <h1>What I've Been Accomplished So Far</h1>
+  </div>
+       <div class="portfolio1" id="portfolioetp">
          <div class="detail">
            <h2>eTripplanner</h2>
            <p>Travel App design project - ETP is a digital trip planning assistant and an ALL-In-One App, it will do the search for travelers based on their preferences. Plan more & spend less time.</p><br>
@@ -109,7 +116,7 @@
   
        </div>
   
-       <div class="portfolio2">
+       <div class="portfolio2" id="portfoliopark">
         <div class="detail">
           <h2>Ontario Parks</h2>
           <p>Government Website UI Redesign to only have essential information and be easy for users to navigate and find the relevant information they search. </p><br>
@@ -124,7 +131,7 @@
         <img src="images/Frame 40a.png" alt="portfolio2pic" id="park"></div>
       </div>     
       
-      <div class="portfolio3">
+      <div class="portfolio3" id="portfoliopeel">
         <div class="detail">
           <h2>Peel Animal Rescue Society</h2>
           <p>Non-For-Profit Website UX/UI Redesign to rebranding and add features and functionality to enhance the user experience.</p><br>
@@ -136,7 +143,7 @@
         <div class="portfoliopic peel"><img src="images/Frame 43.png" alt="portfolio3pic"; id="peel"></div>
       </div>  
   
-      <div class="portfolio4">
+      <div class="portfolio4" id="portfoliorisk">
         <div class="detail">
           <h2>Risk Control Self Assessment Solution</h2>
           <p>Fei’s consulting website provides a solution for risk control self assessment in order for the client to manage financial and operational risks.</p><br>
