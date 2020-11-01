@@ -482,17 +482,21 @@ nav.flexheader {
          padding-right: 8%;
          padding-left: 8%;
          grid-column-gap: 15%;
-         font-size: 0.9em;
+        
      }
      .mystorytitle {
-         font-size: 1.5em;
+         font-size: 30px;
+     }
+     .mystory p {
+         font-size: 24px;
      }
      .mystorytitle1 {
-         font-size: 1.25em;
+         font-size: 30px;
      }
-     .center {
+     .skill h2 {
          justify-self: center;
          width: auto;
+         font-size: 30px;
        
      }
      .gridcontainer3 {
@@ -504,9 +508,20 @@ nav.flexheader {
         justify-content: center;
         padding-right: 8%;
         padding-left: 8%;
-        font-size: 0.9em;
+
       
     }
+    .title1, .title2 {
+        font-size: 28px;
+    }
+    .educationitem, .designationitem, .toolitem, .designitem, .otheritem {
+        font-size: 22px;
+    }
+    .skill h3 {
+        font-size: 26px;
+    }
+
+    
 
      .flexfooter {
        flex-direction: column;
