@@ -217,7 +217,7 @@ nav.flexheader {
     grid-template-areas:
    "heroimg herowordbackground";
     background-color: #19292d;
-    width: 100vw;
+    width: 100%;
     padding-right: 12%;
     padding-left: 12%;
     padding-bottom: 2%;
@@ -437,8 +437,11 @@ nav.flexheader {
          "herowordbackground";
          align-self: center;
          justify-content: center;
-          width: 353.5px;
+    
+         padding-left: 0;
+         padding-right:  0;
           padding-bottom: 10px;
+          width:100vw;
           
          
 
@@ -447,20 +450,25 @@ nav.flexheader {
          grid-area: heroimg;
          justify-self: center;
         align-self: center;
-          width: auto;
+    
+     
           padding-bottom: 0px;
         
      }
      .herowordbackground {
          grid-area: herowordbackground;
          height: auto;
-         width: auto;
-       
+         width: 80%;
+    
+        
+         justify-self: center;
+         align-self: center;
      }
      .heroword {
            font-size: 26px;
            padding-right: 15px;
            padding-left: 15px;
+           
      }
      .gridcontainer2 {
          display: grid;
