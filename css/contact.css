@@ -401,17 +401,23 @@ div.contacttitle h2, div.contacttitle h3 {
     padding-left: 100px;
     padding-top: 0px;
 }   
+
 .contacttitle h2 {
-  font-size: 30px;
+  font-size: 28px;
+  text-align: center;
 }
 .contacttitle h3 {
+
   font-size: 24px;
+  text-align: center;
+ padding-right: 10px;
+ padding-left: 10px
 }
 
   .flexmain h3,
   .flexmain p {
   margin-left: 40px;
-  font-size: 26px;
+  font-size: 24px;
 }
 
     .contactmethod {
@@ -421,6 +427,7 @@ div.contacttitle h2, div.contacttitle h3 {
      
       
     }
+
 
     .flexfooter {
       display: flex;
