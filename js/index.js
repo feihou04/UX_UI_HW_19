@@ -83,7 +83,7 @@ $(".etp").on("mouseout", function(){
 
 
 $(".park").on("mouseenter", function(){
-  $("#park").attr('src','images/Presentation2.gif');
+  $("#park").attr('src','images/presentation1.gif');
 });
 
 $(".park").on("mouseout", function(){
