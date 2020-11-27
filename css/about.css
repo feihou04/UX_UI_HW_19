@@ -379,7 +379,57 @@ nav.flexheader {
   .socialmedia1 :hover, .socialmedia2 :hover {
       color: dodgerblue
   }
+
+  #more, #more1 {display: none;}
+
+  #myBtn {
+    position: relative;
+    padding: 10px 30px;
+
+    margin: 50px 50px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    text-emphasis: nowrap;
+    color:#19292d;
+    background-color: #dfebed;
+    letter-spacing: 0.5px;
+    /*text-transform: uppercase;*/
+    transition: 0.5s;
+    overflow: hidden;
+    border-radius: 8px;
+    font-size: 20px;
+    z-index: 1;
+    margin-bottom: 25px;
+    margin-top: -5px;
+   
+ }
+
+ #myBtn:hover {
+    color: #dfebed;
+ 
+    
+
+}
+
+#myBtn #effect {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    background:#19292d;
+    transition: width 0.5s, height 0.5s;
+    z-index: -1;
+   
+
+}
+#myBtn:hover #effect {
+    width: 350px;
+    height: 350px;
+
   
+}
 
   @media all and (max-width: 600px) {
     .flexheader {

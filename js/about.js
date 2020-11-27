@@ -38,3 +38,41 @@
   $('.second').click(function() {
     $('#plusicon').toggleClass('fas fa-plus fas fa-minus');
   });
+
+
+
+  //read more button
+  function myFunction() {
+	var dots = document.getElementById("dots");
+	var moreText = document.getElementById("more");
+	var btnText = document.getElementById("myBtn");
+  
+	if (dots.style.display === "none") {
+	  dots.style.display = "inline";
+	  btnText.innerHTML = "Read more"; 
+	  moreText.style.display = "none";
+	} else {
+	  dots.style.display = "none";
+	  myBtn.style.display = "none";
+	  moreText.style.display = "inline ";
+	  more1.style.display ="inline-block";
+	}
+  }
+
+  // button mouseenter and mouseout function
+
+
+  $("#myBtn").on("mouseenter", function(e){
+	x = e.pageX - $(this).offset().left;
+	y = e.pageY - $(this).offset().top;
+	$(this).find("#effect").css({top:y, left:x});
+   // $("#etp").attr('src','images/flash2.gif');
+
+
+});
+$("#myBtn").on("mouseout", function(e){
+	x = e.pageX - $(this).offset().left;
+	y = e.pageY - $(this).offset().top;
+	$(this).find("#effect").css({top:y, left:x});
+	//$("#etp").attr('src','images/Frame 41.png');
+});
