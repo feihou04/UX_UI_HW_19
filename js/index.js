@@ -97,3 +97,10 @@ $(".peel").on("mouseenter", function(){
 $(".peel").on("mouseout", function(){
  $("#peel").attr('src','images/Frame 43.png');
 });
+$(".yogi").on("mouseenter", function(){
+  $("#yogi").attr('src','images/yogihead.gif');
+});
+
+$(".yogi").on("mouseout", function(){
+ $("#yogi").attr('src','images/yogihead.png');
+});
