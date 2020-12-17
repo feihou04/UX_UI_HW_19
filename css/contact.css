@@ -209,7 +209,12 @@ letter-spacing: 5px;
   text-decoration: none;
   color: #19292d;
 }
-
+.portfoliolist li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffad6f;
+  transform: translateX(25px);
+  translate: all 0.25s;
+}
 .contacttitle {
   position: relative;
 
